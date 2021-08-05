@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const timestamp = require('./timestamp');
 const whoami = require('./whoami');
-const PORT = 8080;
+require('dotenv').config()
+const PORT = process.env.PORT;
 
 //the main file for the dateApi
 app.use(timestamp);
